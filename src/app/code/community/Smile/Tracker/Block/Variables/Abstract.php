@@ -23,8 +23,7 @@ class Smile_Tracker_Block_Variables_Abstract extends Mage_Core_Block_Template
     public function isEnabled()
     {
         $mainBlock = $this->getLayout()->getBlock('smile.tracker.config');
-
-        return !is_null($mainBlock) && $mainBlock->isEnabled();
+        return $mainBlock && $mainBlock->isEnabled();
     }
 
     /**
